@@ -1,0 +1,9 @@
+version: 2
+sources:
+  - name: raw
+    database: parch_posey # The name of the database where the raw data is stored
+    schema: postgres   # The schema where the customers table is stored
+    tables:
+      - name: seed_data
+        description: "This table contains customer data."
+

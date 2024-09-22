@@ -1,0 +1,18 @@
+version: 2
+models:
+  - name: dim_customers
+    description: "This table contains customer information."
+    columns:
+      - name: customer_id
+        description: "Unique identifier for the customer."
+      - name: customer_name
+        description: "The customer's full name."
+        tests:
+          - unique
+          - not_null
+
+  - name: fact_purchases
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
